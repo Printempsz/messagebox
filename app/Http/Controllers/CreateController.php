@@ -10,7 +10,7 @@ class CreateController extends Controller
     /**
      * [POST] message.new:action
      */
-    public function create($request)
+    public function create(Request $request)
     {
         $message = new \App\Message;
         $message->title         =$request->title;
@@ -18,6 +18,6 @@ class CreateController extends Controller
         $message->from_user_id  =$request->from_user_id;
         $message->reply_user_id =$request->reply_user_id;
         $message->save();
-        return redirect()->back();
+        return redirect()->back;
     }
 }
