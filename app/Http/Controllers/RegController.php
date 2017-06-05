@@ -11,7 +11,7 @@ class RegController extends Controller
     {
         $user = new \App\User;
         $user->name         =$request->name;
-        $user->password     =$request->password;
+        $user->password     =bcrypt($request->password);
         $user->save();
         return redirect()->route('login');
     }

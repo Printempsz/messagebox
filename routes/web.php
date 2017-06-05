@@ -26,7 +26,7 @@ Route::get('/', function () {
 
 Route::get('list/{id}',function(){
     return view('page.index');
-});
+})                                     ->name('index');
 Route::post('list/{id}','ListController@new');
 Route::get('reg',function(){
     return view('page.reg');
@@ -35,4 +35,4 @@ Route::post('reg','RegController@reg');
 Route::get('sign_in',function(){
     return view('page.login');
 })                                      ->name('login');
-Route::post('sign_in','SignController@sign');
+Route::post('sign_in','LoginController@login');
