@@ -16,7 +16,7 @@ class CreateController extends Controller
         $message->title         =$request->title;
         $message->content       =$request->content;
         $message->from_user_id  =$request->from_user_id;
-        $message->reply_user_id =$request->reply_user_id;
+        $message->reply_message_id =$request->reply_message_id;
         $message->save();
         return redirect()->route('index');
     }

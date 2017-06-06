@@ -15,6 +15,9 @@
                 <td><input type="text" name="from_user_id" value="{{ Auth::id() }}"></td>
             </tr>
             <tr>
+                <td><input type="text" name="reply_message_id" value="{{ Auth::id() }}"></td>
+            </tr>
+            <tr>
                 <td><input type="submit" value="发送"></td>
             </tr>
         </table>
@@ -32,6 +35,9 @@
                 <td><p>内容:</p></td>
                 <td>{{ $message->content }}</td>
             </tr>
+            @foreach($message->messages as $comment)
+                <tr><td>{{ $comment->title }}</td></tr>
+            @endforeach
         @endforeach
     </table>
     {{ $messages->links() }}

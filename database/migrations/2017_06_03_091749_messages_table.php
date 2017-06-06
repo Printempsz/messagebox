@@ -19,7 +19,7 @@ class MessagesTable extends Migration
             $table->string('title');
             $table->string('content');
             $table->integer('from_user_id');
-            $table->integer('reply_user_id');
+            $table->integer('reply_message_id');
             $table->timestamps();
         });
 

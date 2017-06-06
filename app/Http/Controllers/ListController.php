@@ -17,7 +17,6 @@ class ListController extends Controller
         $messages = \App\Message::latest()->paginate(20);
         return view('page.index',[
             'messages'      => $messages,
-            'from_user_id'  => Auth::id(),
         ]);
     }
 
