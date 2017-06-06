@@ -24,10 +24,8 @@ Route::get('/', function () {
 //    Route::post('',             'CreateController@create') ->name('new:action');
 //});
 
-Route::get('list/{id}',function(){
-    return view('page.index');
-})                                     ->name('index');
-Route::post('list/{id}','ListController@new');
+Route::get('list','ListController@index') ->name('index');
+Route::post('list','CreateController@new') ->name('new');
 Route::get('reg',function(){
     return view('page.reg');
 });
